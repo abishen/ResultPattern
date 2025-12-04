@@ -69,15 +69,39 @@ public class ResultExtensionsTest
         // Arrange
         var originalResult = Result<int>.Success(5);
         int OnSuccess(int x) => x * 2;
-        Func<string, int> onFailure = _ => -1;
+        int OnFailure(string _) => -1;
 
         // Act
-        var matchedResult = originalResult.Match(OnSuccess, onFailure);
+        var matchedResult = originalResult.Match(OnSuccess, OnFailure);
 
         // Assert
         Assert.True(matchedResult.IsSuccess);
         Assert.Equal(10, matchedResult.Value);
         Assert.Null(matchedResult.Error);
+    }
+    
+    [Fact]
+    public void Match_Success_ShouldApplyOnSuccessAndReturnSuccessPerson()
+    {
+        // Arrange
+  
+        var originalResult = Result<string>.Success("Test,20,test@gmail.com");
+        Person Mapper(string x) => new Person()
+        {
+            Name = x.Split(",")[0],
+            Age = int.Parse(x.Split(",")[1]),
+            Email = x.Split(",")[2]
+        };
+
+        // Act
+        var mappedResult = originalResult.Map(Mapper);
+
+        // Assert
+        Assert.True(mappedResult.IsSuccess);
+        Assert.Equal("Test", mappedResult.Value.Name);
+        Assert.Equal(20, mappedResult.Value.Age);
+        Assert.Equal("test@gmail.com", mappedResult.Value.Email);
+        Assert.Null(mappedResult.Error);
     }
 
     [Fact]
@@ -85,11 +109,11 @@ public class ResultExtensionsTest
     {
         // Arrange
         var originalResult = Result<int>.Failure("Error occurred");
-        Func<int, int> onSuccess = x => x * 2;
-        Func<string, int> onFailure = err => err.Length;
+        int OnSuccess(int x) => x * 2;
+        int OnFailure(string err) => err.Length;
 
         // Act
-        var matchedResult = originalResult.Match(onSuccess, onFailure);
+        var matchedResult = originalResult.Match(OnSuccess, OnFailure);
 
         // Assert
         Assert.True(matchedResult.IsSuccess);
