@@ -1,5 +1,4 @@
-﻿using ResultPattern.Core;
-namespace ResultPattern.Core.Test;
+﻿namespace ResultPattern.Core.Test;
 
 public class ResultTest
 {

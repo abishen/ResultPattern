@@ -1,5 +1,3 @@
-using Xunit;
-using ResultPattern.Core;
 using ResultPattern.Core.Extension;
 
 namespace ResultPattern.Core.Test;
@@ -43,7 +41,7 @@ public class ResultExtensionsTest
     {
         // Arrange
         var originalResult = Result<int>.Success(5);
-        Func<int, string> mapper = x => throw new InvalidOperationException("Mapper failed");
+        Func<int, string> mapper = _ => throw new InvalidOperationException("Mapper failed");
 
         // Act
         var mappedResult = originalResult.Map(mapper);
@@ -58,7 +56,7 @@ public class ResultExtensionsTest
     public void Map_NullResult_ShouldThrowArgumentNullException()
     {
         // Arrange
-        Result<int> originalResult = null;
+        Result<int> originalResult = null!;
         Func<int, string> mapper = x => x.ToString();
 
         // Act & Assert
@@ -70,11 +68,11 @@ public class ResultExtensionsTest
     {
         // Arrange
         var originalResult = Result<int>.Success(5);
-        Func<int, int> onSuccess = x => x * 2;
-        Func<string, int> onFailure = err => -1;
+        int OnSuccess(int x) => x * 2;
+        Func<string, int> onFailure = _ => -1;
 
         // Act
-        var matchedResult = originalResult.Match(onSuccess, onFailure);
+        var matchedResult = originalResult.Match(OnSuccess, onFailure);
 
         // Assert
         Assert.True(matchedResult.IsSuccess);
@@ -104,8 +102,8 @@ public class ResultExtensionsTest
     {
         // Arrange
         var originalResult = Result<int>.Success(5);
-        Func<int, int> onSuccess = x => throw new InvalidOperationException("OnSuccess failed");
-        Func<string, int> onFailure = err => -1;
+        Func<int, int> onSuccess = _ => throw new InvalidOperationException("OnSuccess failed");
+        Func<string, int> onFailure = _ => -1;
 
         // Act
         var matchedResult = originalResult.Match(onSuccess, onFailure);
@@ -122,7 +120,7 @@ public class ResultExtensionsTest
         // Arrange
         var originalResult = Result<int>.Failure("Error");
         Func<int, int> onSuccess = x => x * 2;
-        Func<string, int> onFailure = err => throw new InvalidOperationException("OnFailure failed");
+        Func<string, int> onFailure = _ => throw new InvalidOperationException("OnFailure failed");
 
         // Act
         var matchedResult = originalResult.Match(onSuccess, onFailure);
@@ -137,9 +135,9 @@ public class ResultExtensionsTest
     public void Match_NullResult_ShouldThrowArgumentNullException()
     {
         // Arrange
-        Result<int> originalResult = null;
+        Result<int> originalResult = null!;
         Func<int, int> onSuccess = x => x;
-        Func<string, int> onFailure = err => -1;
+        Func<string, int> onFailure = _ => -1;
 
         // Act & Assert
         Assert.Throws<ArgumentNullException>(() => originalResult.Match(onSuccess, onFailure));
