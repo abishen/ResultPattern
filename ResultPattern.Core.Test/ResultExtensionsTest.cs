@@ -1,7 +1,11 @@
 using ResultPattern.Core.Extension;
+using ResultPattern.Core.Test.MockObject;
 
 namespace ResultPattern.Core.Test;
 
+/// <summary>
+/// Provides unit tests for extensions methods on the Result class to validate their functionality.
+/// </summary>
 public class ResultExtensionsTest
 {
     [Fact]

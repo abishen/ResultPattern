@@ -1,5 +1,8 @@
 ﻿namespace ResultPattern.Core.Test;
 
+/// <summary>
+/// Represents a series of tests for validating the behavior of the <see cref="Result{T}"/> class.
+/// </summary>
 public class ResultTest
 {
     [Fact]
