@@ -11,14 +11,14 @@ public class ResultExtensionsTest
     {
         // Arrange
         var originalResult = Result<int>.Success(5);
-        Func<int, string> mapper = x => (x * 2).ToString();
+        Func<int, int> mapper = x => (x * 2);
 
         // Act
         var mappedResult = originalResult.Map(mapper);
 
         // Assert
         Assert.True(mappedResult.IsSuccess);
-        Assert.Equal("10", mappedResult.Value);
+        Assert.Equal(10, mappedResult.Value);
         Assert.Null(mappedResult.Error);
     }
 
