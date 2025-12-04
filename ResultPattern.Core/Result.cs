@@ -1,4 +1,4 @@
-﻿namespace Code.Example;
+﻿namespace ResultPattern.Core;
 
 public class Result<T>
 {

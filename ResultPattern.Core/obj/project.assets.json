@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abishen/Documents/ResultPattern/ResultPattern.Core/ResultPattern.Core.csproj",
+      "projectUniqueName": "/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/ResultPattern.Core.csproj",
       "projectName": "ResultPattern.Core",
-      "projectPath": "/Users/abishen/Documents/ResultPattern/ResultPattern.Core/ResultPattern.Core.csproj",
+      "projectPath": "/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/ResultPattern.Core.csproj",
       "packagesPath": "/Users/abishen/.nuget/packages/",
-      "outputPath": "/Users/abishen/Documents/ResultPattern/ResultPattern.Core/obj/",
+      "outputPath": "/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/abishen/.nuget/NuGet/NuGet.Config"

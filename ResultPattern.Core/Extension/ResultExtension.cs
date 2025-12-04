@@ -1,4 +1,4 @@
-using Code.Example;
+using ResultPattern.Core;
 
 namespace ResultPattern.Core.Extension;
 

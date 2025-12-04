@@ -1,0 +1,12 @@
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/bin/Debug/net10.0/ResultPattern.Core.deps.json
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/bin/Debug/net10.0/ResultPattern.Core.dll
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/bin/Debug/net10.0/ResultPattern.Core.pdb
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.AssemblyInfoInputs.cache
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.AssemblyInfo.cs
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.csproj.CoreCompileInputs.cache
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.sourcelink.json
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.dll
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/refint/ResultPattern.Core.dll
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ResultPattern.Core.pdb
+/Users/abishen/Documents/ResultPattern/ResultPattern/ResultPattern.Core/obj/Debug/net10.0/ref/ResultPattern.Core.dll
