@@ -1,7 +1,7 @@
 ﻿using ResultPattern.Core;
 namespace ResultPattern.Core.Test;
 
-public class ResultExtensionTest
+public class ResultTest
 {
     [Fact]
     public void Success_ShouldCreateSuccessfulResult_WithValueAndNoError()

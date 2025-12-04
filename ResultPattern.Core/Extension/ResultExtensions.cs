@@ -1,8 +1,6 @@
-using ResultPattern.Core;
-
 namespace ResultPattern.Core.Extension;
 
-public static class ResultExtension
+public static class ResultExtensions
 {
     public static Result<TResult> Map<T, TResult>(this Result<T> result, Func<T, TResult> mapper)
     {
